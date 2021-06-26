@@ -60,14 +60,14 @@ for trainSet, testSet in LOOCV.split(data):
     print("\nHit Rate: ", RecommenderMetrics.HitRate(topNPredicted, leftOutPredictions))
 
     # Break down hit rate by rating value
-    print("\nrHR (Hit Rate by Rating value): ")
-    RecommenderMetrics.RatingHitRate(topNPredicted, leftOutPredictions)
+    # print("\nrHR (Hit Rate by Rating value): ")
+    # RecommenderMetrics.RatingHitRate(topNPredicted, leftOutPredictions)
 
     # See how often we recommended a movie the user actually liked
-    print("\ncHR (Cumulative Hit Rate, rating >= 4): ", RecommenderMetrics.CumulativeHitRate(topNPredicted, leftOutPredictions, 4.0))
+    # print("\ncHR (Cumulative Hit Rate, rating >= 4): ", RecommenderMetrics.CumulativeHitRate(topNPredicted, leftOutPredictions, 4.0))
 
     # Compute ARHR
-    print("\nARHR (Average Reciprocal Hit Rank): ", RecommenderMetrics.AverageReciprocalHitRank(topNPredicted, leftOutPredictions))
+    # print("\nARHR (Average Reciprocal Hit Rank): ", RecommenderMetrics.AverageReciprocalHitRank(topNPredicted, leftOutPredictions))
 
 print("\nComputing complete recommendations, no hold outs...")
 algo.fit(fullTrainSet)

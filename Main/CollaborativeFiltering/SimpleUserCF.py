@@ -20,9 +20,7 @@ data = ml.loadMovieLensLatestSmall()
 
 trainSet = data.build_full_trainset()
 
-sim_options = {'name': 'cosine',
-               'user_based': True
-               }
+sim_options = {'name': 'cosine', 'user_based': True}
 
 model = KNNBasic(sim_options=sim_options)
 model.fit(trainSet)

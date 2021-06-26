@@ -29,11 +29,11 @@ class Evaluator:
         print("\n")
         
         if (doTopN):
-            print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(
-                    "Algorithm", "RMSE", "MAE", "HR", "cHR", "ARHR", "Coverage", "Diversity", "Novelty"))
+            print("{:<10} {:<10} {:<10} {:<10} {:<10} {:<10} {:<10}".format(
+                    "Algorithm", "RMSE", "MAE", "HR", "Coverage", "Diversity", "Novelty"))
             for (name, metrics) in results.items():
-                print("{:<10} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f}".format(
-                        name, metrics["RMSE"], metrics["MAE"], metrics["HR"], metrics["cHR"], metrics["ARHR"],
+                print("{:<10} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f} {:<10.4f}".format(
+                        name, metrics["RMSE"], metrics["MAE"], metrics["HR"],
                                       metrics["Coverage"], metrics["Diversity"], metrics["Novelty"]))
         else:
             print("{:<10} {:<10} {:<10}".format("Algorithm", "RMSE", "MAE"))
@@ -45,8 +45,8 @@ class Evaluator:
         print("MAE:       Mean Absolute Error. Lower values mean better accuracy.")
         if (doTopN):
             print("HR:        Hit Rate; how often we are able to recommend a left-out rating. Higher is better.")
-            print("cHR:       Cumulative Hit Rate; hit rate, confined to ratings above a certain threshold. Higher is better.")
-            print("ARHR:      Average Reciprocal Hit Rank - Hit rate that takes the ranking into account. Higher is better." )
+            # print("cHR:       Cumulative Hit Rate; hit rate, confined to ratings above a certain threshold. Higher is better.")
+            # print("ARHR:      Average Reciprocal Hit Rank - Hit rate that takes the ranking into account. Higher is better." )
             print("Coverage:  Ratio of users for whom recommendations above a certain threshold exist. Higher is better.")
             print("Diversity: 1-S, where S is the average similarity score between every possible pair of recommendations")
             print("           for a given user. Higher means more diverse.")

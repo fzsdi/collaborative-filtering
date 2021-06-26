@@ -38,9 +38,9 @@ class EvaluatedAlgorithm:
             # See how often we recommended a movie the user actually rated
             metrics["HR"] = RecommenderMetrics.HitRate(topNPredicted, leftOutPredictions)   
             # See how often we recommended a movie the user actually liked
-            metrics["cHR"] = RecommenderMetrics.CumulativeHitRate(topNPredicted, leftOutPredictions)
+            # metrics["cHR"] = RecommenderMetrics.CumulativeHitRate(topNPredicted, leftOutPredictions)
             # Compute ARHR
-            metrics["ARHR"] = RecommenderMetrics.AverageReciprocalHitRank(topNPredicted, leftOutPredictions)
+            # metrics["ARHR"] = RecommenderMetrics.AverageReciprocalHitRank(topNPredicted, leftOutPredictions)
         
             #Evaluate properties of recommendations on full training set
             if (verbose):
