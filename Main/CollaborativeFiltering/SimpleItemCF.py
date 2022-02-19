@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  9 10:10:04 2018
-
-@author: Frank
-"""
-
 from MovieLens import MovieLens
 from surprise import KNNBasic
 import heapq

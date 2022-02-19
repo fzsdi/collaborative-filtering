@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed May  9 10:10:04 2018
-
-@author: Frank
-"""
-
 from MovieLens import MovieLens
 from surprise import KNNBasic
 import heapq
@@ -36,6 +29,7 @@ for innerID, score in enumerate(similarityRow):
     if (innerID != testUserInnerID):
         similarUsers.append( (innerID, score) )
 
+# Sort all of the users by their similarity to the user
 kNeighbors = heapq.nlargest(k, similarUsers, key=lambda t: t[1])
 
 # Get the stuff they rated, and add up ratings for each item, weighted by user similarity

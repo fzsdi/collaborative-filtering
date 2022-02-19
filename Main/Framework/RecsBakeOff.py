@@ -10,8 +10,6 @@ from surprise import SVD
 from surprise import NormalPredictor
 from Evaluator import Evaluator
 
-import random
-import numpy as np
 
 def LoadMovieLensData():
     ml = MovieLens()
@@ -21,8 +19,6 @@ def LoadMovieLensData():
     rankings = ml.getPopularityRanks()
     return (data, rankings)
 
-np.random.seed(0)
-random.seed(0)
 
 # Load up common data set for the recommender algorithms
 (evaluationData, rankings) = LoadMovieLensData()
